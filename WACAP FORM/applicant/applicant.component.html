@@ -1,0 +1,115 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h3 class="text-primary">APPLICANT 1: PERSONAL BACKGROUND & EMPLOYMENT INFORMATION</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" formControlName="Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+                      <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                          <div *ngIf="f.Name.errors.required">Name is required</div>
+                      </div>
+                  </div>
+
+                 
+
+                  <div class="form-group">
+                      <label>Preferto be called:</label>
+                      <input type="text" formControlName="Preferto_called" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Preferto_called.errors }" />
+                      <div *ngIf="submitted && f.Preferto_called.errors" class="invalid-feedback">
+                          
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Marital Status</label>
+                      <input type="text" formControlName="Phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.marital_status.errors }" />
+                     
+                  </div>
+
+
+                  <div class="form-group">
+                      <label>Length of time</label>
+                      
+
+                      <select [(ngModel)]="selectedValue">
+                            <option *ngFor="#c of countries" value="c.id">{{c.name}}</option>
+                         </select>`
+
+
+
+</div>
+
+                  
+                  <div class="form-group">
+                      <label>City</label>
+                      <input type="text" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+                      <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                          <div *ngIf="f.city.errors.required">City is required</div>
+                           </div>
+                  </div>
+
+                    
+                  <div class="form-group">
+                      <label>State</label>
+                      <input type="text" formControlName="state" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.state.errors }" />
+                      <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                          <div *ngIf="f.state.errors.required">State is required</div>
+                           </div>
+                  </div>
+
+
+                  <div class="form-group">
+                      <label>ZIP Code</label>
+                      <input type="text" formControlName="zip" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.zip.errors }" />
+                      <div *ngIf="submitted && f.zip.errors" class="invalid-feedback">
+                          <div *ngIf="f.zip.errors.required">State is required</div>
+                           </div>
+                  </div>
+
+
+                  
+                  <div class="form-group">
+                      <label>Length at this address</label>
+                      <input type="text" formControlName="address_length" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address_length.errors }" />
+                      <div *ngIf="submitted && f.address_length.errors" class="invalid-feedback">
+                          <div *ngIf="f.address_length.errors.required">State is required</div>
+                           </div>
+                  </div>
+
+
+                    
+                  <div class="form-group">
+                      <label>Primary language spoken in the home</label>
+                      <input type="text" formControlName="primary_home" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.primary_home.errors }" />
+                      <!-- <div *ngIf="submitted && f.primary_home.errors" class="invalid-feedback">
+                          <div *ngIf="f.primary_home.errors.required">State is required</div>
+                           </div> -->
+                  </div>
+
+
+                  <div class="form-group">
+                      <label>How did you hear about WACAP?</label>
+                      <input type="text" formControlName="about_wcap" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.about_wcap.errors }" />
+                      <!-- <div *ngIf="submitted && f.about_wcap.errors" class="invalid-feedback">
+                          <div *ngIf="f.about_wcap.errors.required">State is required</div>
+                           </div> -->
+                  </div>
+
+                  
+
+                  <div class="form-group">
+                      <label>Why did you choose WACAP?</label>
+                      <input type="text" formControlName="choose_wcap" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.choose_wcap.errors }" />
+                      <!-- <div *ngIf="submitted && f.choose_wcap.errors" class="invalid-feedback">
+                          <div *ngIf="f.choose_wcap.errors.required">State is required</div>
+                           </div> -->
+                  </div>
+                      <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
